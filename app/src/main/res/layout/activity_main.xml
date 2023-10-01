@@ -11,11 +11,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="192dp"
         android:fontFamily="monospace"
-        android:text="@string/app_name_header"
+        android:text="@string/heading_app_name"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -23,14 +24,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="@string/mortgage_amount_label"
+        android:text="@string/text_mortgage_amount"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/tilMortgageAmount"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintHorizontal_bias="0.185"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_name_header"
-        app:layout_constraintVertical_bias="0.868" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilMortgageAmount"
@@ -40,7 +41,7 @@
         app:boxBackgroundMode="outline"
         app:boxCollapsedPaddingTop="0dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.396"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_name_header">
 
@@ -49,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/andika"
-            android:hint="@string/mortgage_amount_hint"
+            android:hint="@string/hint_mortgage_amount"
             android:inputType="number|numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -57,12 +58,12 @@
         android:id="@+id/tvInterestRate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="44dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="@string/interest_rate_label"
+        android:text="@string/text_interest_rate"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintHorizontal_bias="0.167"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilMortgageAmount" />
 
@@ -72,58 +73,19 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.396"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvInterestRate"
-        app:layout_constraintVertical_bias="0.022">
+        app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etInterestRate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/andika"
-            android:hint="Enter interest rate here"
+            android:hint="@string/hint_interest_rate"
             android:inputType="number|numberDecimal" />
 
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/tvPaymentFrequency"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="Payment Frequency"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilInterestRate" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilPaymentFrequency"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:clickable="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.396"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPaymentFrequency"
-        app:layout_constraintVertical_bias="0.04">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPaymentFrequency"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:contextClickable="false"
-            android:focusable="false"
-            android:focusableInTouchMode="false"
-            android:fontFamily="@font/andika"
-            android:inputType="text|textCapWords"
-            android:textAllCaps="true"
-            tools:text="Monthly" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <View
@@ -134,5 +96,61 @@
         app:layout_constraintBottom_toTopOf="@+id/tvMortgageAmount"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_name_header" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="148dp"
+        android:text="@string/btn_calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="164dp"
+        android:layout_height="64dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalculate"
+        app:layout_constraintVertical_bias="0.309" />
+
+    <TextView
+        android:id="@+id/tvLoanTenure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/text_loan_tenure"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tilLoanTenure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilInterestRate"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilLoanTenure"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilInterestRate">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etLoanTenure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/andika"
+            android:hint="@string/hint_loan_tenure"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,11 +1,18 @@
 <resources>
     <string name="app_name">Assignment1</string>
-    <string name="app_name_header">EMI Calculator</string>
-    <string name="mortgage_amount_hint">Enter amount here</string>
-    <string name="mortgage_amount_label">Mortgage Amount</string>
+    <string name="heading_app_name">EMI Calculator</string>
 
-    <string name="interest_rate_label">Interest Rate</string>
+    <string name="hint_mortgage_amount">Enter amount</string>
+    <string name="text_mortgage_amount">Mortgage Amount</string>
 
+    <string name="text_interest_rate">Interest Rate</string>
+    <string name="hint_interest_rate">Enter interest rate (%)</string>
 
-    PaymentFrequency
+    <string name="text_loan_tenure">Loan Tenure</string>
+    <string name="hint_loan_tenure">Enter loan tenure</string>
+
+    <string name="btn_calculate">Calculate Payment</string>
+
+    <string name="emi_message">Monthly Payment: $%.2f</string>
+
 </resources>
