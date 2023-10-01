@@ -14,5 +14,6 @@
     <string name="btn_calculate">Calculate Payment</string>
 
     <string name="emi_message">Monthly Payment: $%.2f</string>
+    <string name="error_message">Please fill in all the fields.</string>
 
 </resources>
