@@ -2,6 +2,7 @@ package com.example.assignment1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,46 +25,48 @@ public class MainActivity extends AppCompatActivity {
         TextInputEditText interestRateEditText = findViewById(R.id.etInterestRate);
         TextInputEditText loanTenureEditText = findViewById(R.id.etLoanTenure);
 
-        //add event listener for calculate button
-        //when button is clicked, the user's input for the mortgage, interest and loan tenure
-        //will be retrieved and used for calculation of EMI
+        // Add event listener for "Calculate Payment" button
+        // When button is clicked, the user's input for the mortgage, interest and loan tenure
+        // will be retrieved and used for calculation of EMI
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                //get the inputs from the text fields
+                // Get the inputs from the text fields
                 String mortgageAmountString = mortgageAmountEditText.getText().toString();
                 String interestRateString = interestRateEditText.getText().toString();
                 String loanTenureString = loanTenureEditText.getText().toString();
 
-                // Display the result in a TextView
-                TextView resultTextView = findViewById(R.id.tvResult);
+                // Display the error in a TextView
+                TextView errorTextView = findViewById(R.id.tvError);
 
-                // Check for empty input or non-numeric input
+                // Check for empty input
                 if (!mortgageAmountString.isEmpty() && !interestRateString.isEmpty() && !loanTenureString.isEmpty()) {
-                    //convert strings to double
+                    // Convert strings to double
                     double mortgageAmount = Double.parseDouble(mortgageAmountString);
                     double interestRate = Double.parseDouble(interestRateString);
 
                     double monthlyInterestRate = interestRate / 12 / 100;
 
-                    //convert string to int
+                    // Convert string to int
                     int loanTenure = Integer.parseInt(loanTenureString);
                     int numberOfMonthlyPayments = loanTenure * 12;
 
-                    //calculation of EMI
+                    // Calculate EMI
                     EMI = mortgageAmount * monthlyInterestRate *
                             Math.pow(1 + monthlyInterestRate, numberOfMonthlyPayments) /
                             (Math.pow(1 + monthlyInterestRate, numberOfMonthlyPayments) - 1);
 
-                    //stores the value of EMI inside resource
-                    String emiMessage = getString(R.string.emi_message, EMI);
+                    // Create an Intent to switch to the CalculationActivity and pass the calculated EMI for display
+                    Intent calculationIntent = new Intent(MainActivity.this, CalculationActivity.class);
+                    calculationIntent.putExtra("emi", EMI);
 
-                    //sets the value of EMI to the result text view
-                    resultTextView.setText(emiMessage);
+                    // Start the CalculationActivity
+                    startActivity(calculationIntent);
 
                 } else
-                    resultTextView.setText(R.string.error_message);
+                    // Display an error message if there are empty inputs
+                    errorTextView.setText(R.string.error_message);
             }
         });
     }

@@ -112,7 +112,7 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        app:cardBackgroundColor="#F4F0F0"
+        app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="0dp"
         app:cardElevation="0dp"
         app:contentPadding="40dp"
@@ -121,10 +121,10 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/tvResult"
+            android:id="@+id/tvError"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#F4F0F0"
+            android:background="#FFFFFF"
             android:fontFamily="sans-serif-condensed-medium"
             android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
