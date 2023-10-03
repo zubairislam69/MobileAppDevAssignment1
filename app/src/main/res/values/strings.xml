@@ -16,4 +16,7 @@
     <string name="emi_message">Monthly Payment: $%.2f</string>
     <string name="error_message">Please fill in all the fields.</string>
 
+    <string name="btn_back_to_calculation">Return to Calculator</string>
+
+
 </resources>

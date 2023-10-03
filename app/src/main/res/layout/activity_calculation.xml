@@ -29,11 +29,11 @@
         app:layout_constraintTop_toBottomOf="@+id/app_name_header2" />
 
     <Button
-        android:id="@+id/btnGoBack"
+        android:id="@+id/btnBackToCalculation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="148dp"
-        android:text="Go Back"
+        android:text="@string/btn_back_to_calculation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

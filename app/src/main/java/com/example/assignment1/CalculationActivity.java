@@ -14,7 +14,7 @@ public class CalculationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculation);
 
-        Button goBackButton = findViewById(R.id.btnGoBack);
+        Button goBackButton = findViewById(R.id.btnBackToCalculation);
 
         // Retrieve the calculated EMI value from the intent
         Intent calculationDataIntent = getIntent();
