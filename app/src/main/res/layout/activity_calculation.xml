@@ -7,7 +7,7 @@
     tools:context=".CalculationActivity">
 
     <TextView
-        android:id="@+id/app_name_header2"
+        android:id="@+id/tvAppName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -20,13 +20,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/divider2"
+        android:id="@+id/dividerHeader2"
         android:layout_width="409dp"
         android:layout_height="1dp"
         android:layout_marginTop="28dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_name_header2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAppName2" />
 
     <Button
         android:id="@+id/btnBackToCalculation"
@@ -50,6 +50,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+        app:layout_constraintTop_toBottomOf="@+id/dividerHeader2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

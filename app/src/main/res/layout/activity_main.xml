@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/app_name_header"
+        android:id="@+id/tvAppName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -30,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.185"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_name_header"
+        app:layout_constraintTop_toBottomOf="@+id/tvAppName"
         app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_name_header">
+        app:layout_constraintTop_toBottomOf="@+id/tvAppName">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etMortgageAmount"
@@ -89,13 +89,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <View
-        android:id="@+id/divider"
+        android:id="@+id/dividerHeader"
         android:layout_width="409dp"
         android:layout_height="1dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintBottom_toTopOf="@+id/tvMortgageAmount"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_name_header" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAppName" />
 
     <Button
         android:id="@+id/btnCalculate"
@@ -109,7 +109,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/cvError"
         android:layout_width="match_parent"
         android:layout_height="160dp"
         app:cardBackgroundColor="#FFFFFF"
